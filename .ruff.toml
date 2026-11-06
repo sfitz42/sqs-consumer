@@ -1,0 +1,15 @@
+target-version = "py312"
+line-length = 88
+
+[lint]
+select = ["E", "F", "W", "I", "UP", "B", "SIM", "N", "ANN", "TID", "D", "S101"]
+ignore = ["D105", "D107"]
+
+[lint.flake8-tidy-imports]
+ban-relative-imports = "all"
+
+[lint.pydocstyle]
+convention = "google"
+
+[lint.per-file-ignores]
+"tests/**" = ["ANN", "D", "S101"]
